@@ -3,27 +3,27 @@
 
 make reinstall 
 
-‡@EREBOS,DNS1‚ÌBIND‚Ìƒo[ƒWƒ‡ƒ“Šm”F
-@/usr/local/sbin/named -v (psƒRƒ}ƒ“ƒh‚ÅAnamed‚Ìpath‚ğŠm”F‚ª•K—v)
-@BIND 9.9.7-P2 (Extended Support Version)
+1. EREBOS,DNS1ã®BINDã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ç¢ºèª
+ã€€/usr/local/sbin/named -v (psã‚³ãƒãƒ³ãƒ‰ã§ã€namedã®pathã‚’ç¢ºèªãŒå¿…è¦)
+ã€€BIND 9.9.7-P2 (Extended Support Version)
 
-‡AÆã«‚Ì‘ÎÛƒo[ƒWƒ‡ƒ“‚ğŠm”F
-@BIND 9.9.7-P2‚Í‘ÎÛƒo[ƒWƒ‡ƒ“‚ğ‚È‚è‚Ü‚·‚Ì‚ÅAƒo[ƒWƒ‡ƒ“ƒAƒbƒv‚ª•K—v
+2. è„†å¼±æ€§ã®å¯¾è±¡ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’ç¢ºèª
+ã€€BIND 9.9.7-P2ã¯å¯¾è±¡ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’ãªã‚Šã¾ã™ã®ã§ã€ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ãŒå¿…è¦
 
-‡BPort Upgrade‚ğs‚¢‚Ü‚·B
-@# portsnap fetch
-@# portsnap update
-@# /usr/libexec/locate.update
-@# /usr/ports/dns/bind99/Makefile‚Åbind‚Ìƒo[ƒWƒ‡ƒ“‚ğŠm”F
-@‘ÎÛŠO‚Ìƒo[ƒWƒ‡ƒ“‚ªã‚ª‚ê‚ÎA‰º‹L‚ÌƒRƒ}ƒ“ƒh‚Åƒo[ƒWƒ‡ƒ“ƒAƒbƒv‚µ‚Ü‚·B
-@i“¯‚¶BIND99Œn‚È‚çİ’èƒtƒ@ƒCƒ‹‚ğ–w‚Ç‚»‚Ì‚Ü‚Üg‚¦‚Ü‚·j
-@# cd /usr/ports/dns/bind99/
-@# make reinstall clean
+3. Port Upgradeã‚’è¡Œã„ã¾ã™ã€‚
+ã€€# portsnap fetch
+ã€€# portsnap update
+ã€€# /usr/libexec/locate.update
+ã€€# /usr/ports/dns/bind99/Makefileã§bindã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’ç¢ºèª
+ã€€å¯¾è±¡å¤–ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ãŒä¸ŠãŒã‚Œã°ã€ä¸‹è¨˜ã®ã‚³ãƒãƒ³ãƒ‰ã§ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ã—ã¾ã™ã€‚
+ã€€ï¼ˆåŒã˜BIND99ç³»ãªã‚‰è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ®†ã©ãã®ã¾ã¾ä½¿ãˆã¾ã™ï¼‰
+ã€€# cd /usr/ports/dns/bind99/
+ã€€# make reinstall clean
 
-‡Cnamed restart
-@#/etc/rc.d/named restart
+4. named restart
+ã€€#/etc/rc.d/named restart
 
-‡Dnamedƒo[ƒWƒ‡ƒ“‚ğŠm”FE“®ìŠm”F
+5. namedãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’ç¢ºèªãƒ»å‹•ä½œç¢ºèª
 
 
 update on Hemera (FreeBSD 10.3)
