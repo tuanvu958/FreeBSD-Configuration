@@ -27,7 +27,7 @@ make reinstall
 
 
 update on Hemera (FreeBSD 10.3)
-cp /usr/port/dns/bind99 (full installer) -> may can cai
+cp /usr/port/dns/bind99 (full installer) -> インストールしたいサーバ
 
 saramander2:copy folder bind910 of hemera to saramander2, reinstall
 # make ALLOW_UNSUPPORTED_SYSTEM=yes reinstall
