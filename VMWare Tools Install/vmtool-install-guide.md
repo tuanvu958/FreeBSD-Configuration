@@ -1,6 +1,6 @@
 Require
-	¦@Install /usr/ports/misc/compat6x
-	¦@Link perl to: /usr/bin/perl
+	â€»ã€€Install /usr/ports/misc/compat6x
+	â€»ã€€Link perl to: /usr/bin/perl
 
 1, On Vmware, mount vmware-freebsd-tool iso file to CD-ROM
 2, On FreeBSD Guest OS, mount iso to system
@@ -12,12 +12,12 @@ Require
 	# ./vmware-install.pl (perl is necessary)
 
 
-
+ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼
 
 On FreeBSD11
 
 # and install Open VM Tools by FreeBSD package manager
-# pkg install open-vm-tools-nox11@(X11)
+# pkg install open-vm-tools-nox11ã€€(X11)
 pkg install open-vm-tools  (using)
 
 To run the Open Virtual Machine tools at startup, you must add the following settings to your /etc/rc.conf
