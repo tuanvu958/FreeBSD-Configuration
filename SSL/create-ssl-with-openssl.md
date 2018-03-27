@@ -30,11 +30,11 @@ https://jprs.jp/pubcert/info/intermediate/
 C=JP, ST=OSAKA, L=OSAKA, O=NANKAI-DENSETSU Co.Ltd,, CN=future-keith.jp
 
 
-# JPRS Ø–¾‘İ’è
+# JPRS è¨¼æ˜æ›¸è¨­å®š
 
-1D’†ŠÔCAØ–¾‘Šm”F•û–@
+1ï¼ä¸­é–“CAè¨¼æ˜æ›¸ç¢ºèªæ–¹æ³•
 	openssl x509 -in secure.iam.ne.jp.cer -text -noout
 	|-Issuer: C=JP, O=Japan Registry Services Co., Ltd., CN=JPRS Domain Validation Authority - G1
 	|-Issuer: C=JP, O=Japan Registry Services Co., Ltd., CN=JPRS Organization Validation Authority - G1
-	+JPRS Domain Validation Authority - G1: JPRS_DVCA.cer‚ğ—˜—p‚µ‚Ü‚·
-	+JPRS Organization Validation Authority - G1FJPRS_OVCA.cer‚ğ—˜—p‚µ‚Ü‚·
+	+JPRS Domain Validation Authority - G1: JPRS_DVCA.cerã‚’åˆ©ç”¨ã—ã¾ã™
+	+JPRS Organization Validation Authority - G1ï¼šJPRS_OVCA.cerã‚’åˆ©ç”¨ã—ã¾ã™
