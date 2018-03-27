@@ -1,2 +1,0 @@
-# init carp interface on start
-/usr/local/sbin/carphast.sh AUTO 1@ixl1
