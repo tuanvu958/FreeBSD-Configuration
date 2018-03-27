@@ -1,0 +1,6 @@
+# list of service to start/stop when failover
+services="mountd postgresql"
+
+# list of hast resources
+resources="shared"
+#resources="shared1 shared2"

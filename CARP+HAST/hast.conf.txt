@@ -1,0 +1,12 @@
+replication memsync
+
+resource shared {
+        on sdb {
+                local /dev/da0p3
+                remote IP_of_server_1
+        }
+        on sdb2 {
+                local /dev/da0p3
+                remote IP_of_server_2
+        }
+}

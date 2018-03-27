@@ -1,0 +1,8 @@
+#
+...
+
+ifconfig_ixl1="inet 192.168.242.104 netmask 255.255.255.0"
+ifconfig_ixl1_alias0="inet vhid 1 advskew 200 pass tHiY!4w alias 192.168.242.103/32"
+defaultrouter="192.168.242.28"
+
+...

@@ -1,0 +1,6 @@
+notify 0 {
+        match "system"          "CARP";
+        match "subsystem"       "[0-9]+@[0-9a-z]+";
+        match "type"            "(INIT|MASTER|BACKUP)";
+        action "/usr/local/sbin/carphast.sh $type $subsystem";
+};
