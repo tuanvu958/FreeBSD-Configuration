@@ -1,0 +1,24 @@
+
+When youÅfre trying to delete a snapshot from the FreeNAS you receive a message cannot destroy snapshot backups@auto-20140315.1448-2d: dataset is busy. 
+
+This may be caused by stuck replication job is preventing the snapshot from being deleted.
+
+Run the following command to see what is being held.
+
+# zfs holds Data@auto-20141107.1513-4w
+NAME                        TAG           TIMESTAMP
+Data@auto-20141107.1513-4w  freenas:repl  Fri Nov  7 15:16 2014
+
+You can then release the stuck snapshot.
+
+[root@NAS] ~# zfs release -r freenas:repl Data@auto-20141107.1513-4w
+
+Then you are able to delete the snapshot.
+
+[root@NAS] ~# zfs destroy -r Data@auto-20141107.1513-4w
+
+===============================================================================
+
+
+Manual run replication task:
+# python /usr/local/www/freenasUI/tools/autorepl.py
