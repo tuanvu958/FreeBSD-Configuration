@@ -1,0 +1,56 @@
+# Drop DB
+DROP DATABASE IF EXISTS DBNAME; 
+# Create DB
+CREATE DATABASE wordpress;
+
+CREATE USER wordpressuser@localhost IDENTIFIED BY 'password';
+
+GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost;
+
+FLUSH PRIVILEGES;
+
+set root login without password
+ /usr/local/bin/mysqld_safe --skip-grant-tables &
+mysql -u root
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
+
+# Dump
+touch knsMDCT.sql
+chown mysql:mysql knsMDCT.sql
+mysqldump knsMDCT > knsMDCT.sql
+
+# Restore
+drop database if exists knsMDCT;
+create database knsMDCT;
+grant all privileges on knsMDCT.* to knsUSERTDCB@10.10.1.150;
+flush privileges;
+
+mysql knsMDCT < knsMDCT.sql
+
+
+
+# mysql change root password on freebsd
+    Start the MySQL server instance or daemon with the --skip-grant-tables option (security setting).
+
+    $ mysqld --skip-grant-tables
+
+    Execute these statements.
+
+    $ mysql -u root mysql
+    $mysql> UPDATE user SET Password=PASSWORD('my_password') where USER='root';
+    $mysql> FLUSH PRIVILEGES;
+
+If you face the unknown field Password error above use:
+
+update user set authentication_string=password('my_password') where user='root';
+
+    Finally, restart the instance/daemon without the --skip-grant-tables option.
+
+    $ /etc/init.d/mysql restart
+
+You should now be able to connect with your new password.
+
+$ mysql -u root -p
+
+Enter password: my_password

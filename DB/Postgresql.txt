@@ -1,0 +1,62 @@
+1. list table, database, user account
+	# \dt
+	# \l
+	# \du (user account)
+2-1. query pg_view
+	# select viewname from pg_catalog.pg_views;
+2-2. view size of all database
+	# SELECT pg_database.datname, pg_size_pretty(pg_database_size(pg_database.datname)) AS size FROM pg_database;
+3. dump database to file
+	# pg_dump dbname > outfile
+4. restore database
+	# CREATE USER tom WITH PASSWORD 'myPassword';
+	# GRANT ALL PRIVILEGES ON DATABASE jerry to tom;
+	# ALTER USER "user_name" WITH PASSWORD 'new_password'; (set or change passwd)
+	# create database DBNAME (owner USERNAME) encoding 'UTF-8' TEMPLATE templaet0;
+	# psql DBNAME < outfile (dump file)
+
+
+####### DUMP ###################
+$ pg_dump -U postgres -h localhost -p 5433 --clean --file=sandbox.sql sandbox
+$ pg_dumpall -U postgres -h localhost -p 5433 --clean --globals-only --file=globals.sql
+
+####### RESTORE ################
+psql --set ON_ERROR_STOP=on dbname < infile
+$ psql -U postgres -h localhost -p 5433 DBNAME < globals.sql
+$ psql -U postgres -h localhost -p 5433 DBNAME < sabuon
+
+
+#####################################################################
+Reload postgres configuration without restart
+
+edit config file: postgresql.conf and pg_hba.conf
+
+1. postgres user
+		# su - pgsql
+hoac 	# su - postgres
+2. Make changes:
+		# vi /usr/local/pgsql/data/pg_hba.conf
+3. Reload configs:
+		pg_ctl reload -D /usr/local/pgsql/data/
+
+
+######################################################################
+Dumpall schema, roles, tablespaces
+
+1. Schema
+		# su pgsql
+		# pg_dumpall --schema-only > scheme.sql
+
+2. Roles
+		# su pgsql
+		# pg_dumpall --roles-only > roles.sql
+
+3. Tablespaces
+		# su pgsql
+		# pg_dumpall --tablespaces-only > tablespaces.sql
+
+4. Dump all roles on the source database / computer with
+		# pg_dumpall -g > roles.sql
+
+5. Restore on the target database / computer with:
+		# psql -U postgres -f roles.sql
