@@ -1,0 +1,3 @@
+# config docroot in /etc/make.conf
+SUEXEC_DOCROOT="/usr/home/appli/prism"
+
